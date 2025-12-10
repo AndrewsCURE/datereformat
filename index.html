@@ -1,333 +1,296 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.2">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6d6d6d; -webkit-text-stroke: #6d6d6d}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6b0001; -webkit-text-stroke: #6b0001}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #fb0007; -webkit-text-stroke: #fb0007}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #0000ff; -webkit-text-stroke: #0000ff}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; -webkit-text-stroke: #000000}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #4d5055; -webkit-text-stroke: #4d5055}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; -webkit-text-stroke: #000000; min-height: 16.0px}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #18702b; -webkit-text-stroke: #18702b}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #0e6e6d; -webkit-text-stroke: #0e6e6d}
-    span.s1 {font-kerning: none; background-color: #ecf1f7}
-    span.s2 {font-kerning: none; color: #fb0007; background-color: #ecf1f7; -webkit-text-stroke: 0px #fb0007}
-    span.s3 {font-kerning: none; color: #2a2a2a; background-color: #ecf1f7; -webkit-text-stroke: 0px #2a2a2a}
-    span.s4 {font-kerning: none; color: #000000; background-color: #ecf1f7; -webkit-text-stroke: 0px #000000}
-    span.s5 {font-kerning: none; color: #0000ff; background-color: #ecf1f7; -webkit-text-stroke: 0px #0000ff}
-    span.s6 {font-kerning: none; color: #6b0001; background-color: #ecf1f7; -webkit-text-stroke: 0px #6b0001}
-    span.s7 {font-kerning: none; color: #18702b; background-color: #ecf1f7; -webkit-text-stroke: 0px #18702b}
-    span.s8 {font-kerning: none; color: #093c94; background-color: #ecf1f7; -webkit-text-stroke: 0px #093c94}
-    span.s9 {font-kerning: none; color: #137646; background-color: #ecf1f7; -webkit-text-stroke: 0px #137646}
-    span.s10 {font-kerning: none}
-    span.s11 {font-kerning: none; color: #6f0ec3; background-color: #ecf1f7; -webkit-text-stroke: 0px #6f0ec3}
-    span.s12 {font-kerning: none; color: #0e6e6d; background-color: #ecf1f7; -webkit-text-stroke: 0px #0e6e6d}
-    span.s13 {font-kerning: none; color: #a4450b; background-color: #ecf1f7; -webkit-text-stroke: 0px #a4450b}
-    span.s14 {font-kerning: none; color: #4d5055; background-color: #ecf1f7; -webkit-text-stroke: 0px #4d5055}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO 8601 Date Converter</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .container-shadow {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+        }
+        /* Custom scrollbar for textareas */
+        textarea::-webkit-scrollbar {
+            width: 8px;
+        }
+        textarea::-webkit-scrollbar-thumb {
+            background-color: #9ca3af;
+            border-radius: 4px;
+        }
+    </style>
 </head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">html</span><span class="s4"> </span><span class="s2">lang</span><span class="s3">=</span><span class="s5">"en"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s5">"UTF-8"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">title</span><span class="s3">&gt;</span><span class="s1">ISO 8601 Date Converter</span><span class="s3">&lt;/</span><span class="s6">title</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Load Tailwind CSS --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.tailwindcss.com"</span><span class="s3">&gt;&lt;/</span><span class="s6">script</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Use Inter font --&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">body</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-family:</span><span class="s1"> </span><span class="s7">'Inter'</span><span class="s1">, </span><span class="s8">sans-serif</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">background-color:</span><span class="s4"> </span><span class="s8">#f7f9fb</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.container-shadow</span><span class="s4"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">box-shadow:</span><span class="s1"> </span><span class="s9">0</span><span class="s1"> </span><span class="s9">10px</span><span class="s1"> </span><span class="s9">30px</span><span class="s1"> </span><span class="s9">-5px</span><span class="s1"> </span><span class="s8">rgba(</span><span class="s9">0</span><span class="s1">, </span><span class="s9">0</span><span class="s1">, </span><span class="s9">0</span><span class="s1">, </span><span class="s9">0.1</span><span class="s8">)</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">/* Custom scrollbar for textareas */</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">textarea::-webkit-scrollbar</span><span class="s4"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">width:</span><span class="s1"> </span><span class="s9">8px</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">textarea::-webkit-scrollbar-thumb</span><span class="s4"> {</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">background-color:</span><span class="s4"> </span><span class="s8">#9ca3af</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-radius:</span><span class="s1"> </span><span class="s9">4px</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s3">&lt;</span><span class="s6">body</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"p-4 md:p-8 min-h-screen"</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"max-w-4xl mx-auto"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">header</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center mb-10"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">h1</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl md:text-4xl font-extrabold text-gray-800 tracking-tight mb-2"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>ISO 8601 Date Transformer</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">h1</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-lg text-gray-500"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>Convert date lists into the standard </span><span class="s3">&lt;</span><span class="s6">code</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm bg-gray-200 p-1 rounded"</span><span class="s3">&gt;</span><span class="s1">YYYY-MM-DDT00:00:00Z</span><span class="s3">&lt;/</span><span class="s6">code</span><span class="s3">&gt;</span><span class="s1"> format.</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">header</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-6 rounded-xl container-shadow mb-8"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-semibold mb-4 text-gray-700"</span><span class="s3">&gt;</span><span class="s4">1. Paste Your Dates</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-sm text-gray-500 mb-3"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>Enter one date per line. Empty lines will be preserved in the output. Supported formats include: </span><span class="s3">&lt;</span><span class="s6">code</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"bg-indigo-100 px-1 rounded text-indigo-700"</span><span class="s3">&gt;</span><span class="s1">DD/MM/YY</span><span class="s3">&lt;/</span><span class="s6">code</span><span class="s3">&gt;</span><span class="s1">, </span><span class="s3">&lt;</span><span class="s6">code</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"bg-indigo-100 px-1 rounded text-indigo-700"</span><span class="s3">&gt;</span><span class="s1">DD-MM-YYYY</span><span class="s3">&lt;/</span><span class="s6">code</span><span class="s3">&gt;</span><span class="s1">, </span><span class="s3">&lt;</span><span class="s6">code</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"bg-indigo-100 px-1 rounded text-indigo-700"</span><span class="s3">&gt;</span><span class="s1">YYYY/MM/DD</span><span class="s3">&lt;/</span><span class="s6">code</span><span class="s3">&gt;</span><span class="s1">, etc.</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">textarea</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"inputDates"</span><span class="s4"> </span><span class="s2">rows</span><span class="s3">=</span><span class="s1">"8"</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out resize-none text-sm"</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">placeholder</span><span class="s3">=</span><span class="s1">"Example:\n30/09/12\n\n01-01-2024\n2023-05-10\n15/12/99"</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&gt;&lt;/</span><span class="s6">textarea</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col sm:flex-row justify-between items-center mt-4 space-y-3 sm:space-y-0"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"convertButton"</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"convertDates()"</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full sm:w-auto px-6 py-3 bg-indigo-600 text-white font-medium text-lg rounded-lg hover:bg-indigo-700 transition duration-150 ease-in-out focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 active:bg-indigo-800 shadow-lg shadow-indigo-200/50"</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>Convert Dates</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"statusMessage"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-sm font-medium text-gray-600"</span><span class="s3">&gt;&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Output Section --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-6 rounded-xl container-shadow"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex justify-between items-center mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-semibold text-gray-700"</span><span class="s3">&gt;</span><span class="s4">2. Reformatted Output</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"copyButton"</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"copyOutput()"</span><span class="s4"> </span><span class="s2">disabled</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-4 py-2 bg-green-500 text-white font-medium text-sm rounded-lg hover:bg-green-600 transition duration-150 ease-in-out focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 disabled:bg-green-300 shadow-md"</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>Copy All Reformatted Dates</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"overflow-x-auto rounded-lg border border-gray-200"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">table</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"outputTable"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"min-w-full divide-y divide-gray-200"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">thead</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"bg-gray-50"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">tr</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">th</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/3"</span><span class="s3">&gt;</span><span class="s4">Original Input</span><span class="s3">&lt;/</span><span class="s6">th</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">th</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-2/3"</span><span class="s3">&gt;</span><span class="s4">ISO 8601 Output</span><span class="s3">&lt;/</span><span class="s6">th</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">tr</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">thead</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">tbody</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"outputTableBody"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white divide-y divide-gray-100"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">tr</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">colspan</span><span class="s3">=</span><span class="s1">"2"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 text-sm text-gray-400 text-center italic"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>Results will appear here after conversion.</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">tr</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">tbody</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">table</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">div</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// --- Constants ---</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s11">const</span><span class="s4"> </span><span class="s12">FAILURE_MESSAGE</span><span class="s4"> = </span><span class="s1">'--- PARSING FAILED ---'</span><span class="s4">;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// Utility to pad single digits with a leading zero</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s11">const</span><span class="s1"> pad = (num) =&gt; num &lt; </span><span class="s13">10</span><span class="s1"> ? </span><span class="s7">'0'</span><span class="s1"> + num : num;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// Global array to store the clean, copyable output for all lines</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s11">let</span><span class="s1"> convertedResults = [];<span class="Apple-converted-space"> </span></span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// List of common formats to try parsing (in order of preference/commonality)</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s11">const</span><span class="s4"> </span><span class="s1">DATE_FORMATS</span><span class="s4"> = [</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">// [Regex Pattern, Group 1: Day, Group 2: Month, Group 3: Year (2 or 4 digits)]</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span>{ regex: </span><span class="s1">/^(\d{1,2})[\/-](\d{1,2})[\/-](\d{2})$/</span><span class="s4">, type: </span><span class="s7">'DMY_2'</span><span class="s4"> }, <span class="Apple-converted-space">  </span></span><span class="s14">// DD/MM/YY or DD-MM-YY</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span>{ regex: </span><span class="s1">/^(\d{1,2})[\/-](\d{1,2})[\/-](\d{4})$/</span><span class="s4">, type: </span><span class="s7">'DMY_4'</span><span class="s4"> }, <span class="Apple-converted-space">  </span></span><span class="s14">// DD/MM/YYYY or DD-MM-YYYY</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span>{ regex: </span><span class="s1">/^(\d{4})[\/-](\d{1,2})[\/-](\d{1,2})$/</span><span class="s4">, type: </span><span class="s7">'YMD'</span><span class="s4"> }<span class="Apple-converted-space">      </span></span><span class="s14">// YYYY/MM/DD or YYYY-MM-DD</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>];</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s14">/**</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">     </span>* Tries to parse a date string using known patterns and returns the Date object.</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">     </span>* @param {string} dateString - The raw date string.</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">     </span>* @returns {Date | null} The parsed Date object or null if parsing fails.</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">     </span>*/</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s11">function</span><span class="s1"> parseFlexibleDate(dateString) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">for</span><span class="s1"> (</span><span class="s11">const</span><span class="s1"> fmt </span><span class="s11">of</span><span class="s1"> </span><span class="s12">DATE_FORMATS</span><span class="s1">) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> match = dateString.match(fmt.regex);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">if</span><span class="s1"> (match) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> parts = match.slice(</span><span class="s13">1</span><span class="s1">).map(</span><span class="s12">Number</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">let</span><span class="s1"> day, month, year;</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">// Determine the order of parts based on the type</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">if</span><span class="s1"> (fmt.type === </span><span class="s7">'YMD'</span><span class="s1">) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>[year, month, day] = parts;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>} </span><span class="s11">else</span><span class="s1"> { </span><span class="s14">// DMY_2 or DMY_4</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>[day, month, year] = parts;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">// Handle 2-digit years (YY) - simple century rule</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">if</span><span class="s1"> (fmt.type === </span><span class="s7">'DMY_2'</span><span class="s1">) {</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s1">// Simple rule: years &gt; 50 are 19xx, years &lt;= 50 are 20xx</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>year = (year &gt; </span><span class="s13">50</span><span class="s1">) ? </span><span class="s13">1900</span><span class="s1"> + year : </span><span class="s13">2000</span><span class="s1"> + year;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">// Month is 0-indexed in Date constructor (Jan=0, Dec=11)</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> date = </span><span class="s11">new</span><span class="s1"> </span><span class="s12">Date</span><span class="s1">(year, month - </span><span class="s13">1</span><span class="s1">, day);</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">// Basic validation: Check if the constructed date matches the input parts</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">// (e.g., prevents dates like Feb 30th from being accepted)</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">if</span><span class="s1"> (date.getFullYear() === year &amp;&amp; date.getMonth() === (month - </span><span class="s13">1</span><span class="s1">) &amp;&amp; date.getDate() === day) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">return</span><span class="s1"> date;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">return</span><span class="s1"> </span><span class="s11">null</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s14">/**</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">     </span>* Copies all reformatted output from the stored array to the clipboard.</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">     </span>*/</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s11">function</span><span class="s1"> copyOutput() {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">const</span><span class="s1"> statusElement = document.getElementById(</span><span class="s7">'statusMessage'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">const</span><span class="s1"> textToCopy = convertedResults.join(</span><span class="s7">'\n'</span><span class="s1">); </span><span class="s14">// Use the stored results directly</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">if</span><span class="s1"> (textToCopy.length === </span><span class="s13">0</span><span class="s1"> &amp;&amp; convertedResults.length === </span><span class="s13">0</span><span class="s1">) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">             </span></span><span class="s11">const</span><span class="s1"> originalText = statusElement.innerHTML;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">             </span>statusElement.innerHTML = </span><span class="s1">'&lt;span class="text-red-600 font-bold"&gt;No output to copy.&lt;/span&gt;'</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">             </span>setTimeout(() =&gt; { statusElement.innerHTML = originalText; }, </span><span class="s13">2000</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">             </span></span><span class="s11">return</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">// Use document.execCommand('copy') for better compatibility in iFrame environments</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">try</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> tempTextarea = document.createElement(</span><span class="s7">'textarea'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>tempTextarea.value = textToCopy;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// Style it to be off-screen but still selectable</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>tempTextarea.style.position = </span><span class="s7">'fixed'</span><span class="s1">;<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>tempTextarea.style.top = </span><span class="s7">'0'</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>tempTextarea.style.left = </span><span class="s7">'0'</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>tempTextarea.style.opacity = </span><span class="s7">'0'</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>document.body.appendChild(tempTextarea);</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>tempTextarea.select();</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">let</span><span class="s1"> success = </span><span class="s11">false</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">try</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>success = document.execCommand(</span><span class="s7">'copy'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>} </span><span class="s11">catch</span><span class="s1"> (err) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>console.error(</span><span class="s7">'Copy command failed:'</span><span class="s1">, err);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>document.body.removeChild(tempTextarea);</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">if</span><span class="s1"> (success) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> originalText = statusElement.innerHTML;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">                </span>statusElement.innerHTML = </span><span class="s1">`&lt;span class="text-green-600 font-bold"&gt;Copied </span><span class="s4">${convertedResults.length}</span><span class="s1"> lines (preserving all line breaks) to clipboard!&lt;/span&gt;`</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>setTimeout(() =&gt; { statusElement.innerHTML = originalText; }, </span><span class="s13">2000</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>} </span><span class="s11">else</span><span class="s1"> {</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">                </span>console.error(</span><span class="s1">'Copy failed. Manual copy required.'</span><span class="s4">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> originalText = statusElement.innerHTML;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">                </span>statusElement.innerHTML = </span><span class="s1">'&lt;span class="text-red-600 font-bold"&gt;Copy failed! (Browser error)&lt;/span&gt;'</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>setTimeout(() =&gt; { statusElement.innerHTML = originalText; }, </span><span class="s13">2000</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>} </span><span class="s11">catch</span><span class="s1"> (err) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>console.error(</span><span class="s7">'Error during copy operation:'</span><span class="s1">, err);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s14">/**</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">     </span>* Main function to convert all dates from the textarea.</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">     </span>*/</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s11">function</span><span class="s1"> convertDates() {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">const</span><span class="s1"> inputElement = document.getElementById(</span><span class="s7">'inputDates'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">const</span><span class="s1"> outputBody = document.getElementById(</span><span class="s7">'outputTableBody'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">const</span><span class="s1"> statusElement = document.getElementById(</span><span class="s7">'statusMessage'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">const</span><span class="s1"> copyButton = document.getElementById(</span><span class="s7">'copyButton'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">const</span><span class="s1"> rawInput = inputElement.value;</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">// 1. Split the input by newlines. DO NOT filter out empty lines, preserving all line breaks.</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">const</span><span class="s1"> rawLines = rawInput.split(</span><span class="s7">'\n'</span><span class="s1">);</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span>convertedResults = []; </span><span class="s1">// Reset the global results array</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>statusElement.textContent = </span><span class="s7">`Processing </span><span class="s1">${rawLines.length}</span><span class="s7"> lines...`</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>outputBody.innerHTML = </span><span class="s7">''</span><span class="s1">;<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>copyButton.disabled = </span><span class="s11">true</span><span class="s1">;<span class="Apple-converted-space"> </span></span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">if</span><span class="s1"> (rawLines.length === </span><span class="s13">0</span><span class="s1"> || rawLines.every(line =&gt; line.length === </span><span class="s13">0</span><span class="s1">)) {</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// Handle completely empty input</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>statusElement.textContent = </span><span class="s7">'No dates entered.'</span><span class="s1">;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">            </span>outputBody.innerHTML = </span><span class="s1">`&lt;tr&gt;&lt;td colspan="2" class="px-6 py-4 text-sm text-gray-400 text-center italic"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                </span>Please paste dates into the box above.</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/td&gt;&lt;/tr&gt;`</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">return</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">let</span><span class="s1"> successfulConversions = </span><span class="s13">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">let</span><span class="s1"> failedConversions = </span><span class="s13">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">let</span><span class="s1"> outputHTML = </span><span class="s7">''</span><span class="s1">;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>rawLines.forEach(rawLine =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> originalDate = rawLine.trim();</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s11">let</span><span class="s4"> reformattedOutputText; </span><span class="s1">// The clean text content for copying</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s11">let</span><span class="s4"> reformattedOutputHTML; </span><span class="s1">// The visually styled content for the table</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">let</span><span class="s1"> rowClasses = </span><span class="s7">'whitespace-nowrap'</span><span class="s1">;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">if</span><span class="s1"> (originalDate.length === </span><span class="s13">0</span><span class="s1">) {</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">// Case 1: Empty or whitespace-only line</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>reformattedOutputText = </span><span class="s7">''</span><span class="s1">; </span><span class="s14">// Output is an empty line</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>reformattedOutputHTML = </span><span class="s7">'&amp;nbsp;'</span><span class="s1">; </span><span class="s14">// Visual placeholder for table cell</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">                </span>rowClasses += </span><span class="s1">' bg-gray-50 text-gray-400 italic'</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>} </span><span class="s11">else</span><span class="s1"> {</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">// Case 2: Non-empty line, attempt parsing</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> dt = parseFlexibleDate(originalDate);</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">if</span><span class="s1"> (dt) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s14">// Success</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>reformattedOutputText = </span><span class="s7">`</span><span class="s1">${dt.getFullYear()}</span><span class="s7">-</span><span class="s1">${pad(dt.getMonth() + </span><span class="s13">1</span><span class="s1">)}</span><span class="s7">-</span><span class="s1">${pad(dt.getDate())}</span><span class="s7">T00:00:00Z`</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>reformattedOutputHTML = reformattedOutputText;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>rowClasses += </span><span class="s7">' text-gray-800'</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>successfulConversions++;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>} </span><span class="s11">else</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s14">// Failure</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>reformattedOutputText = </span><span class="s12">FAILURE_MESSAGE</span><span class="s1">;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">                    </span>reformattedOutputHTML = </span><span class="s1">`&lt;span class="text-red-500 font-semibold"&gt;</span><span class="s4">${</span><span class="s12">FAILURE_MESSAGE</span><span class="s4">}</span><span class="s1">&lt;/span&gt;`</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>rowClasses += </span><span class="s7">' bg-red-50 text-red-700'</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>failedConversions++;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// Store the clean text for copying</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>convertedResults.push(reformattedOutputText);</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>outputHTML += </span><span class="s7">`</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                </span>&lt;tr class="</span><span class="s4">${rowClasses}</span><span class="s1"> hover:bg-gray-100"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;td class="px-6 py-3 text-sm font-mono text-gray-600 w-1/3"&gt;</span><span class="s4">${rawLine}</span><span class="s1">&lt;/td&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;td class="px-6 py-3 text-sm font-mono w-2/3"&gt;</span><span class="s4">${reformattedOutputHTML}</span><span class="s1">&lt;/td&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/tr&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span>`</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>outputBody.innerHTML = outputHTML;</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">// Update status message and enable copy button</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">const</span><span class="s1"> totalLines = rawLines.length;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">        </span>statusElement.innerHTML = </span><span class="s1">`Processed </span><span class="s4">${totalLines}</span><span class="s1"> lines. &lt;span class="text-green-600 font-bold"&gt;</span><span class="s4">${successfulConversions}</span><span class="s1"> dates successful&lt;/span&gt;, &lt;span class="text-red-600 font-bold"&gt;</span><span class="s4">${failedConversions}</span><span class="s1"> failed.&lt;/span&gt;`</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>copyButton.disabled = </span><span class="s11">false</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// Initial content population for quick testing</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>window.onload = () =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">const</span><span class="s1"> exampleDates = [</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">"30/09/12"</span><span class="s1">,</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s7">""</span><span class="s4">, </span><span class="s1">// Empty line preserved</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">"01-01-2024"</span><span class="s1">,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">"2023-11-25"</span><span class="s1">,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">"15/12/99"</span><span class="s1">,</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s7">"12/31/2025"</span><span class="s4"> </span><span class="s1">// Expected to fail</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>];</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>document.getElementById(</span><span class="s7">'inputDates'</span><span class="s1">).value = exampleDates.join(</span><span class="s7">'\n'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>convertDates();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>};</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
+<body class="p-4 md:p-8 min-h-screen">
+
+<div class="max-w-4xl mx-auto">
+    <header class="text-center mb-10">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 tracking-tight mb-2">
+            ISO 8601 Date Transformer
+        </h1>
+        <p class="text-lg text-gray-500">
+            Convert date lists into the standard <code class="text-sm bg-gray-200 p-1 rounded">YYYY-MM-DDT00:00:00Z</code> format.
+        </p>
+    </header>
+
+    <div class="bg-white p-6 rounded-xl container-shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4 text-gray-700">1. Paste Your Dates</h2>
+        <p class="text-sm text-gray-500 mb-3">
+            Enter one date per line. Empty lines will be preserved in the output. Supported formats include: <code class="bg-indigo-100 px-1 rounded text-indigo-700">DD/MM/YY</code>, <code class="bg-indigo-100 px-1 rounded text-indigo-700">DD-MM-YYYY</code>, <code class="bg-indigo-100 px-1 rounded text-indigo-700">YYYY/MM/DD</code>, etc.
+        </p>
+
+        <textarea id="inputDates" rows="8"
+            class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out resize-none text-sm"
+            placeholder="Example:\n30/09/12\n\n01-01-2024\n2023-05-10\n15/12/99"
+        ></textarea>
+
+        <div class="flex flex-col sm:flex-row justify-between items-center mt-4 space-y-3 sm:space-y-0">
+            <button id="convertButton" onclick="convertDates()"
+                class="w-full sm:w-auto px-6 py-3 bg-indigo-600 text-white font-medium text-lg rounded-lg hover:bg-indigo-700 transition duration-150 ease-in-out focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 active:bg-indigo-800 shadow-lg shadow-indigo-200/50"
+            >
+                Convert Dates
+            </button>
+            <div id="statusMessage" class="text-sm font-medium text-gray-600"></div>
+        </div>
+    </div>
+
+    <!-- Output Section -->
+    <div class="bg-white p-6 rounded-xl container-shadow">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-semibold text-gray-700">2. Reformatted Output</h2>
+            <button id="copyButton" onclick="copyOutput()" disabled
+                class="px-4 py-2 bg-green-500 text-white font-medium text-sm rounded-lg hover:bg-green-600 transition duration-150 ease-in-out focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 disabled:bg-green-300 shadow-md"
+            >
+                Copy All Reformatted Dates
+            </button>
+        </div>
+        
+        <div class="overflow-x-auto rounded-lg border border-gray-200">
+            <table id="outputTable" class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/3">Original Input</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-2/3">ISO 8601 Output</th>
+                    </tr>
+                </thead>
+                <tbody id="outputTableBody" class="bg-white divide-y divide-gray-100">
+                    <tr>
+                        <td colspan="2" class="px-6 py-4 text-sm text-gray-400 text-center italic">
+                            Results will appear here after conversion.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    // --- Constants ---
+    const FAILURE_MESSAGE = '--- PARSING FAILED ---';
+    // Utility to pad single digits with a leading zero
+    const pad = (num) => num < 10 ? '0' + num : num;
+
+    // Global array to store the clean, copyable output for all lines
+    let convertedResults = []; 
+
+    // List of common formats to try parsing (in order of preference/commonality)
+    const DATE_FORMATS = [
+        // [Regex Pattern, Group 1: Day, Group 2: Month, Group 3: Year (2 or 4 digits)]
+        { regex: /^(\d{1,2})[\/-](\d{1,2})[\/-](\d{2})$/, type: 'DMY_2' },   // DD/MM/YY or DD-MM-YY
+        { regex: /^(\d{1,2})[\/-](\d{1,2})[\/-](\d{4})$/, type: 'DMY_4' },   // DD/MM/YYYY or DD-MM-YYYY
+        { regex: /^(\d{4})[\/-](\d{1,2})[\/-](\d{1,2})$/, type: 'YMD' }      // YYYY/MM/DD or YYYY-MM-DD
+    ];
+
+    /**
+     * Tries to parse a date string using known patterns and returns the Date object.
+     * @param {string} dateString - The raw date string.
+     * @returns {Date | null} The parsed Date object or null if parsing fails.
+     */
+    function parseFlexibleDate(dateString) {
+        for (const fmt of DATE_FORMATS) {
+            const match = dateString.match(fmt.regex);
+            if (match) {
+                const parts = match.slice(1).map(Number);
+                let day, month, year;
+                
+                // Determine the order of parts based on the type
+                if (fmt.type === 'YMD') {
+                    [year, month, day] = parts;
+                } else { // DMY_2 or DMY_4
+                    [day, month, year] = parts;
+                }
+                
+                // Handle 2-digit years (YY) - simple century rule
+                if (fmt.type === 'DMY_2') {
+                    // Simple rule: years > 50 are 19xx, years <= 50 are 20xx
+                    year = (year > 50) ? 1900 + year : 2000 + year;
+                }
+
+                // Month is 0-indexed in Date constructor (Jan=0, Dec=11)
+                const date = new Date(year, month - 1, day);
+
+                // Basic validation: Check if the constructed date matches the input parts
+                // (e.g., prevents dates like Feb 30th from being accepted)
+                if (date.getFullYear() === year && date.getMonth() === (month - 1) && date.getDate() === day) {
+                    return date;
+                }
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Copies all reformatted output from the stored array to the clipboard.
+     */
+    function copyOutput() {
+        const statusElement = document.getElementById('statusMessage');
+        const textToCopy = convertedResults.join('\n'); // Use the stored results directly
+        
+        if (textToCopy.length === 0 && convertedResults.length === 0) {
+             const originalText = statusElement.innerHTML;
+             statusElement.innerHTML = '<span class="text-red-600 font-bold">No output to copy.</span>';
+             setTimeout(() => { statusElement.innerHTML = originalText; }, 2000);
+             return;
+        }
+
+        // Use document.execCommand('copy') for better compatibility in iFrame environments
+        try {
+            const tempTextarea = document.createElement('textarea');
+            tempTextarea.value = textToCopy;
+            // Style it to be off-screen but still selectable
+            tempTextarea.style.position = 'fixed'; 
+            tempTextarea.style.top = '0';
+            tempTextarea.style.left = '0';
+            tempTextarea.style.opacity = '0';
+            document.body.appendChild(tempTextarea);
+            
+            tempTextarea.select();
+            
+            let success = false;
+            try {
+                success = document.execCommand('copy');
+            } catch (err) {
+                console.error('Copy command failed:', err);
+            }
+            
+            document.body.removeChild(tempTextarea);
+
+            if (success) {
+                const originalText = statusElement.innerHTML;
+                statusElement.innerHTML = `<span class="text-green-600 font-bold">Copied ${convertedResults.length} lines (preserving all line breaks) to clipboard!</span>`;
+                setTimeout(() => { statusElement.innerHTML = originalText; }, 2000);
+            } else {
+                console.error('Copy failed. Manual copy required.');
+                const originalText = statusElement.innerHTML;
+                statusElement.innerHTML = '<span class="text-red-600 font-bold">Copy failed! (Browser error)</span>';
+                setTimeout(() => { statusElement.innerHTML = originalText; }, 2000);
+            }
+        } catch (err) {
+            console.error('Error during copy operation:', err);
+        }
+    }
+
+    /**
+     * Main function to convert all dates from the textarea.
+     */
+    function convertDates() {
+        const inputElement = document.getElementById('inputDates');
+        const outputBody = document.getElementById('outputTableBody');
+        const statusElement = document.getElementById('statusMessage');
+        const copyButton = document.getElementById('copyButton');
+        const rawInput = inputElement.value;
+        
+        // 1. Split the input by newlines. DO NOT filter out empty lines, preserving all line breaks.
+        const rawLines = rawInput.split('\n');
+        
+        convertedResults = []; // Reset the global results array
+
+        statusElement.textContent = `Processing ${rawLines.length} lines...`;
+        outputBody.innerHTML = ''; 
+        copyButton.disabled = true; 
+
+        if (rawLines.length === 0 || rawLines.every(line => line.length === 0)) {
+            // Handle completely empty input
+            statusElement.textContent = 'No dates entered.';
+            outputBody.innerHTML = `<tr><td colspan="2" class="px-6 py-4 text-sm text-gray-400 text-center italic">
+                Please paste dates into the box above.
+            </td></tr>`;
+            return;
+        }
+
+        let successfulConversions = 0;
+        let failedConversions = 0;
+        let outputHTML = '';
+
+        rawLines.forEach(rawLine => {
+            const originalDate = rawLine.trim();
+            let reformattedOutputText; // The clean text content for copying
+            let reformattedOutputHTML; // The visually styled content for the table
+            let rowClasses = 'whitespace-nowrap';
+
+            if (originalDate.length === 0) {
+                // Case 1: Empty or whitespace-only line
+                reformattedOutputText = ''; // Output is an empty line
+                reformattedOutputHTML = '<span class="text-gray-400 italic">Empty Line</span>'; // Visual placeholder for table cell
+                rowClasses += ' bg-gray-50';
+            } else {
+                // Case 2: Non-empty line, attempt parsing
+                const dt = parseFlexibleDate(originalDate);
+
+                if (dt) {
+                    // Success
+                    reformattedOutputText = `${dt.getFullYear()}-${pad(dt.getMonth() + 1)}-${pad(dt.getDate())}T00:00:00Z`;
+                    reformattedOutputHTML = reformattedOutputText;
+                    rowClasses += ' text-gray-800';
+                    successfulConversions++;
+                } else {
+                    // Failure
+                    reformattedOutputText = FAILURE_MESSAGE;
+                    reformattedOutputHTML = `<span class="text-red-500 font-semibold">${FAILURE_MESSAGE}</span>`;
+                    rowClasses += ' bg-red-50 text-red-700';
+                    failedConversions++;
+                }
+            }
+            
+            // Store the clean text for copying
+            convertedResults.push(reformattedOutputText);
+
+            outputHTML += `
+                <tr class="${rowClasses} hover:bg-gray-100">
+                    <td class="px-6 py-3 text-sm font-mono text-gray-600 w-1/3">${rawLine}</td>
+                    <td class="px-6 py-3 text-sm font-mono w-2/3">${reformattedOutputHTML}</td>
+                </tr>
+            `;
+        });
+
+        outputBody.innerHTML = outputHTML;
+        
+        // Update status message and enable copy button
+        const totalLines = rawLines.length;
+        statusElement.innerHTML = `Processed ${totalLines} lines. <span class="text-green-600 font-bold">${successfulConversions} dates successful</span>, <span class="text-red-600 font-bold">${failedConversions} failed.</span>`;
+        copyButton.disabled = false;
+    }
+    
+    // Initial content population for quick testing
+    window.onload = () => {
+        const exampleDates = [
+            "30/09/12",
+            "", // Empty line preserved
+            "01-01-2024",
+            "2023-11-25",
+            "15/12/99",
+            "12/31/2025" // Expected to fail
+        ];
+        document.getElementById('inputDates').value = exampleDates.join('\n');
+        convertDates();
+    };
+
+</script>
+
 </body>
 </html>
